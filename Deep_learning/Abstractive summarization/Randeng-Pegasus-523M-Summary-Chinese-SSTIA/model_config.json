@@ -1,0 +1,28 @@
+{
+  "init_args": [
+    {
+      "vocab_size": 50000,
+      "bos_token_id": 0,
+      "pad_token_id": 0,
+      "eos_token_id": 1,
+      "forced_eos_token_id": 1,
+      "decoder_start_token_id": 0,
+      "d_model": 1024,
+      "num_encoder_layers": 16,
+      "num_decoder_layers": 16,
+      "encoder_attention_heads": 16,
+      "decoder_attention_heads": 16,
+      "encoder_ffn_dim": 4096,
+      "decoder_ffn_dim": 4096,
+      "dropout": 0.1,
+      "activation_function": "relu",
+      "attention_dropout": 0.1,
+      "activation_dropout": 0.1,
+      "max_position_embeddings": 1024,
+      "scale_embedding": true,
+      "init_std": 0.02,
+      "init_class": "PegasusModel"
+    }
+  ],
+  "init_class": "PegasusForConditionalGeneration"
+}
