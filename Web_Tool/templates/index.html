@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模型预测</title>
+    <style>
+        body {
+            background-image: url('/static/back.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+
+        #content {
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="file"],
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="file"]:hover,
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.uploaded {
+            background-color: #7FFF7F;
+        }
+
+        #links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>抑郁症患者认知路径抽取模型</h1>
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()" id="uploadButton">上传文件</button>
+        <div id="uploadStatus" style="display:none;">文件上传中，请等待...</div>
+        <div id="links" style="display:none;">
+            <a id="viewResultLink" href="#">查看预测结果</a>
+            <a id="downloadLink" href="#">下载预测结果</a> <!-- Set href to '#' -->
+        </div>
+        <div id="result" style="display:none;"></div>
+    </div>
+    <script>
+        function uploadFile() {
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            if (!file) {
+                document.getElementById('result').innerHTML = "未成功选择任何文件";
+                return;
+            }
+
+            if (file.type !== 'text/plain') {
+                document.getElementById('result').innerHTML = "请上传指定格式文件（.txt）";
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append('file', file);
+
+            // 显示上传状态
+            document.getElementById('uploadStatus').style.display = 'block';
+
+            fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').innerHTML = data;
+                    document.getElementById('uploadButton').classList.add('uploaded');
+
+                    // 将预测结果保存到本地存储
+                    localStorage.setItem('predictionResult', data);
+
+                    // 隐藏上传状态
+                    document.getElementById('uploadStatus').style.display = 'none';
+                    // 显示链接
+                    document.getElementById('links').style.display = 'block';
+                    // 设置查看结果链接
+                    var viewResultLink = document.getElementById('viewResultLink');
+                    viewResultLink.href = '/result';
+                    // 设置下载链接
+                    var downloadLink = document.getElementById('downloadLink');
+                    downloadLink.href = '#'; // Set href to '#'
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('result').innerHTML = "上传文件时出现错误";
+                    // 隐藏上传状态
+                    document.getElementById('uploadStatus').style.display = 'none';
+                });
+        }
+
+        document.getElementById('downloadLink').addEventListener('click', function(event) {
+            // 阻止默认的点击事件行为
+            event.preventDefault();
+
+            // 弹出文件保存对话框
+            var filename = 'Result.txt'; // 设置默认文件名
+            var a = document.createElement('a');
+            document.body.appendChild(a);
+            a.style = 'display: none';
+            fetch('/download')
+                .then(response => response.blob())
+                .then(blob => {
+                    var url = window.URL.createObjectURL(blob);
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a); // 添加到页面中
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a); // 下载完成后移除
+                })
+                .catch(error => console.error('Error downloading file:', error));
+        });
+
+        document.getElementById('fileInput').addEventListener('click', function() {
+            document.getElementById('uploadButton').classList.remove('uploaded');
+            document.getElementById('result').innerHTML = "";
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('links').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
