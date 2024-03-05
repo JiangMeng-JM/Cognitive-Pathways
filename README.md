@@ -6,6 +6,23 @@ This is the repository for the paper: Exploring Cognitive Pathways through Deep 
 ## Introduction:
 This repository contains all the data and code necessary for replicating the experiments in the paper. Additionally, it provides a set of tools for implementing automatic extraction of cognitive pathways. You can package it into an executable (.exe) for use by non-professionals.
 The directory structure is as follows:
+* **Data**:
+
+
+
+* **Deep_learning**:
+
+
+
+* **LLMEvaluate**:
+
+
+
+* **Web_Tool**:
+
+
+
+
 
 * **Dependency**:
 ```
