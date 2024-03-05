@@ -37,6 +37,7 @@ def generate_cognitive_path(prompt):
 
     response = openai.ChatCompletion.create(
         model="gpt-4",
+        model="gpt-3.5",
         temperature=0.8,
         max_tokens=1000,
         messages=[
