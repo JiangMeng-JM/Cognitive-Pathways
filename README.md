@@ -7,7 +7,12 @@ This is the repository for the paper: Exploring Cognitive Pathways through Deep 
 This repository contains all the data and code necessary for replicating the experiments in the paper. Additionally, it provides a set of tools for implementing automatic extraction of cognitive pathways. You can package it into an executable (.exe) for use by non-professionals.
 The directory structure is as follows:
 * **Data**:
-
+**Source data: This folder contains the source of our dataset.
+**Labeled data: After filtering and processing the source data, it is imported into the Doccano annotation tool for labeling. The folder contains the exported JSON files after annotation.
+**Abstractive summarization: This folder contains the data required for the Abstractive Summarization model in deep learning, which is obtained by further processing labeled data.
+**Hierarchical text classification: This folder contains the data required for the Hierarchical text classification model in deep learning, which is obtained by further processing labeled data.
+**LLMEvaluate: 
+  code for LLM test
 
 
 * **Deep_learning**:
