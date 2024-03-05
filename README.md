@@ -29,3 +29,7 @@ If you have any questions, comments, suggestions, or issues with using this repo
 
 ## Citation:
 If you use this material, we would appreciate if you could cite the following reference:
+```bibtex
+@misc
+}
+```
