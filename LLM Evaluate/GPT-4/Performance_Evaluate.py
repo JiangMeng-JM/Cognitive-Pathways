@@ -2,7 +2,7 @@ import pandas as pd
 
 true_df = pd.read_excel("D:\Programs\Depression\APITest\\result_biaozhu.xlsx")
 pred_df = pd.read_excel("D:\Programs\Depression\APITest\ENDresult_GPT-4.xlsx")
-
+#pred_df = pd.read_excel("D:\Programs\Depression\APITest\ENDResult_GPT-3.5.xlsx")
 
 # Define the hierarchy levels
 level_1_labels = ["触发性事件", "认知歪曲", "情绪反应", "驳斥"]
