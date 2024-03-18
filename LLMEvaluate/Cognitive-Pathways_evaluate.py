@@ -37,7 +37,7 @@ def generate_cognitive_path(prompt):
 
     response = openai.ChatCompletion.create(
         model="gpt-4",
-        #model="gpt-3.5",
+        #model="gpt-3.5-turbo",
         temperature=0.8,
         max_tokens=1000,
         messages=[
@@ -54,10 +54,10 @@ def generate_cognitive_path(prompt):
 
 def main():
     # 读取包含患者陈述的Excel文件
-    df = pd.read_excel('D:\Programs\Depression\APITest\Test4\Reddit2-output_folder\\redditTwo31.xlsx')  # 替换为您的Excel文件路径
+    df = pd.read_excel('patient.xlsx')  # 替换为您的Excel文件路径
     # 用于生成唯一文件名的计数器
     file_count =1
-    output_folder = 'D:\Programs\Depression\APITest\Test4\Reddit2-CepingData'
+    output_folder = 'CepingData' # 替换为您的Excel文件路径
     # 遍历每一行，提取患者陈述并生成认知路径
     for index, row in df.iterrows():
         patient_statement = row['text']
@@ -66,7 +66,7 @@ def main():
         cognitive_path = generate_cognitive_path(patient_statement)
 
         # 生成文件名
-        output_filename = os.path.join(output_folder, f"redditTwo{file_count}.txt")
+        output_filename = os.path.join(output_folder, f"{file_count}.txt")
 
         # 保存认知路径到文件中
         with open(output_filename, 'w', encoding='utf-8') as file:
