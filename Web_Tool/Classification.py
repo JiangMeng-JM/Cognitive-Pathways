@@ -7,7 +7,7 @@ import os
 import paddle
 import paddle.nn.functional as F
 from paddle.io import BatchSampler, DataLoader
-from 原先utils import preprocess_function, read_local_dataset
+from utils import preprocess_function, read_local_dataset
 
 from paddlenlp.data import DataCollatorWithPadding
 from paddlenlp.datasets import load_dataset
@@ -18,9 +18,10 @@ from paddlenlp.utils.log import logger
 #python predict.py --device "cpu" --max_seq_length 128 --batch_size 32 --dataset_dir "data"
 # yapf: disable
 parser = argparse.ArgumentParser()
+#以下路径请替换为你的文件路径
 parser.add_argument('--device', default="gpu", help="Select which device to train model, defaults to gpu.")
 parser.add_argument("--dataset_dir", required=True, default=None, type=str, help="Local dataset directory should include data.txt and label.txt")
-parser.add_argument("--params_path", default="./biaozhuNewDataset/checkpoint/", type=str, help="The path to model parameters to be loaded.")
+parser.add_argument("--params_path", default="./checkpoint/", type=str, help="The path to model parameters to be loaded.")  
 parser.add_argument("--max_seq_length", default=128, type=int, help="The maximum total input sequence length after tokenization. Sequences longer than this will be truncated, sequences shorter will be padded.")
 parser.add_argument("--batch_size", default=32, type=int, help="Batch size per GPU/CPU for training.")
 parser.add_argument("--data_file", type=str, default="data.txt", help="Unlabeled data file name")
