@@ -25,12 +25,12 @@ from paddlenlp.metrics import BLEU
 from paddlenlp.data import DataCollatorForSeq2Seq
 import matplotlib.pyplot as plt
 
-# 通过load_dataset读取本地数据集：train.json和valid.json
-train_dataset = load_dataset("json", data_files='D:\Programs\Depression\Abstract-Summarization\\Data\\train.json', split="train", encoding='utf-8-sig')
-dev_dataset = load_dataset("json", data_files='D:\Programs\Depression\Abstract-Summarization\\Data\\valid.json', split="train", encoding='utf-8-sig')
-test_dataset = load_dataset("json", data_files='D:\Programs\Depression\Abstract-Summarization\\Data\\test.json', split="train", encoding='utf-8-sig')
-# 初始化分词器  Randeng-Pegasus-523M-Summary-Chinese-SSTIA
-tokenizer = PegasusChineseTokenizer.from_pretrained('Randeng-Pegasus-523M-Summary-Chinese-SSTIA')
+# 通过load_dataset读取本地数据集：train.json、valid.json和test.json，请注意将data_files替换为你的文件路径
+train_dataset = load_dataset("json", data_files='Data\\train.json', split="train", encoding='utf-8-sig')   
+dev_dataset = load_dataset("json", data_files='Data\\valid.json', split="train", encoding='utf-8-sig')
+test_dataset = load_dataset("json", data_files='Data\\test.json', split="train", encoding='utf-8-sig')
+# 初始化分词器  Randeng-Pegasus-523M-Summary-Chinese
+tokenizer = PegasusChineseTokenizer.from_pretrained('Randeng-Pegasus-523M-Summary-Chinese')
 def convert_example(example, text_column, summary_column, tokenizer,
                     max_source_length, max_target_length):
     """
@@ -124,12 +124,12 @@ def plot_summary_length_distribution(train_lengths, dev_lengths, test_lengths):
     plt.xlabel('Summary Length')
     plt.ylabel('Count')
     plt.legend()
-    plt.savefig('D:\Programs\Depression\Abstract-Summarization\\ALLbiaozhuData\summary_length_distribution.png')
+    plt.savefig('summary_length_distribution.png')
     plt.show()
 plot_summary_length_distribution(train_summary_lengths, dev_summary_lengths, test_summary_lengths)
 
 # 初始化模型，也可以选择IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese
-model = PegasusForConditionalGeneration.from_pretrained('Randeng-Pegasus-523M-Summary-Chinese-SSTIA')
+model = PegasusForConditionalGeneration.from_pretrained('Randeng-Pegasus-523M-Summary-Chinese')
 # 组装 Batch 数据 & Padding
 batchify_fn = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model)
 
@@ -184,11 +184,11 @@ eval_steps = 1000
 # 摘要的最小长度
 min_target_length = 0
 # 训练模型保存路径
-output_dir = 'D:\Programs\Depression\Abstract-Summarization\\ALLbiaozhuData\checkpoints'
+output_dir = 'checkpoints'
 # 解码beam size
 num_beams = 4
 
-log_writer = LogWriter('D:\\Programs\\Depression\\Abstract-Summarization\\ALLbiaozhuData\\visualdl_log_dir')
+log_writer = LogWriter('visualdl_log_dir')
 lr_scheduler = LinearDecayWithWarmup(learning_rate, num_training_steps, warmup)
 
 # LayerNorm参数不参与weight_decay
