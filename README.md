@@ -16,6 +16,10 @@ The directory structure is as follows:
 * **Deep_learning**:
 The folder contains code for extracting cognitive pathways of depression patients using deep learning models.
 
+* **Model**:
+The folder contains pre-trained models Ernie and Pegasus used in the paper. You can also download them from the following links:
+  * **Ernie**: [https://huggingface.co/nghuyong/ernie-3.0-medium-zh](https://huggingface.co/nghuyong/ernie-3.0-medium-zh)
+  * **Pegasus**: [https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese](https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese)
 
 * **LLMEvaluate**:
 The folder contains code for extracting cognitive pathways of depression patients using LLM.
