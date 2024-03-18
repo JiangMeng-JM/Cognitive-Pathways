@@ -56,7 +56,7 @@ def evaluate_from_json(file_path):
     rouge1_test, rouge2_test, rougel_test, bleu4_test = compute_metrics(preds, targets)
     return rouge1_test, rouge2_test, rougel_test, bleu4_test
 
-# Replace 'your_file_path.json' with the actual path to your JSON file
+# Replace 'json_file_path' with the actual path to your JSON file
 json_file_path = ''
 
 rouge1_test, rouge2_test, rougel_test, bleu4_test = evaluate_from_json(json_file_path)
