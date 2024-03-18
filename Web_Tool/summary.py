@@ -28,9 +28,9 @@ def infer(text, model, tokenizer):
 
 
 # # 加载训练好的模型
-# model = PegasusForConditionalGeneration.from_pretrained('gptData/checkpoints')
+# model = PegasusForConditionalGeneration.from_pretrained('checkpoints')   #请替换为你的训练好的文件的路径
 # model.eval()
-# tokenizer = PegasusChineseTokenizer.from_pretrained('gptData/checkpoints')
+# tokenizer = PegasusChineseTokenizer.from_pretrained('checkpoints')   #请替换为你的训练好的文件的路径
 #
 # # 推理
 # text = ''
@@ -40,9 +40,9 @@ def main():
     parser.add_argument("--text", type=str, required=True, help="Text for summarization")
     args = parser.parse_args()
 
-    model = PegasusForConditionalGeneration.from_pretrained('gptData/checkpoints')
+    model = PegasusForConditionalGeneration.from_pretrained('checkpoints')   #请替换为你的训练好的文件的路径
     model.eval()
-    tokenizer = PegasusChineseTokenizer.from_pretrained('gptData/checkpoints')
+    tokenizer = PegasusChineseTokenizer.from_pretrained('checkpoints')   #请替换为你的训练好的文件的路径
 
     summary_text = infer(args.text, model, tokenizer)
     print(summary_text)
