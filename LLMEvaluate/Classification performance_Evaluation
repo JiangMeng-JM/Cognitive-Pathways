@@ -2,7 +2,7 @@ import pandas as pd
 
 # Replace 'true_df' and  'pred_df' with the actual path to your JSON file
 true_df = pd.read_excel("result_biaozhu.xlsx")
-pred_df = pd.read_excel("ENDresult_GPT-4.xlsx")
+pred_df = pd.read_excel("GPT-4_result.xlsx")
 
 # Define the hierarchy levels
 level_1_labels = ["触发性事件", "认知歪曲", "情绪反应", "驳斥"]
