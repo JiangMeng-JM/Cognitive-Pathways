@@ -57,7 +57,7 @@ def evaluate_from_json(file_path):
     return rouge1_test, rouge2_test, rougel_test, bleu4_test
 
 # Replace 'your_file_path.json' with the actual path to your JSON file
-json_file_path = 'D:\Programs\Depression\Abstract-Summarization\endGPTData\AAAGPT-4-output.json'
+json_file_path = ''
 
 rouge1_test, rouge2_test, rougel_test, bleu4_test = evaluate_from_json(json_file_path)
 
