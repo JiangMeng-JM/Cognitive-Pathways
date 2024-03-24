@@ -6,10 +6,6 @@ This is the repository for the paper: Exploring Cognitive Pathways through Deep 
 ## Introduction:
 This repository contains all the data and code necessary for replicating the experiments in the paper. Additionally, it provides a set of tools for implementing automatic extraction of cognitive pathways. You can package it into an executable (.exe) for use by non-professionals.
 The directory structure is as follows:
-* **Data**:
-  * **Source data**: This folder contains the source of our dataset.
-  * **Abstractive summarization**: This folder contains the data required for the Abstractive Summarization model in deep learning, which is obtained by further processing labeled data.
-  * **Hierarchical text classification**: This folder contains the data required for the Hierarchical text classification model in deep learning, which is obtained by further processing labeled data.
  
 * **Deep_learning**:
 The folder contains code for extracting cognitive pathways of depression patients using deep learning models.
