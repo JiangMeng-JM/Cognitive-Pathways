@@ -8,7 +8,6 @@ This repository contains all the data and code necessary for replicating the exp
 The directory structure is as follows:
 * **Data**:
   * **Source data**: This folder contains the source of our dataset.
-  * **Labeled data**: After filtering and processing the source data, it is imported into the Doccano annotation tool for labeling. The folder contains the exported JSON files after annotation.
   * **Abstractive summarization**: This folder contains the data required for the Abstractive Summarization model in deep learning, which is obtained by further processing labeled data.
   * **Hierarchical text classification**: This folder contains the data required for the Hierarchical text classification model in deep learning, which is obtained by further processing labeled data.
   * **LLMEvaluate**: The folder contains the results of cognitive pathway extraction using the large language models GPT-3.5 and GPT-4 that we invoked.
