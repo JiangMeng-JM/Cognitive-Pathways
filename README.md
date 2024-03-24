@@ -27,7 +27,7 @@ The folder contains code for designing a web page. On this webpage, users can up
 
 
 ## Questions:
-If you have any questions, comments, suggestions, or issues with using this repository, please send a note to **palpitatejiang@163.com** . 
+If you have any questions, comments, suggestions, or issues with using this repository, please send a note to *****@163.com** . 
 
 ## Citation:
 If you use this material, we would appreciate if you could cite the following reference:
