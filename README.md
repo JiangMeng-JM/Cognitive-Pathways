@@ -10,8 +10,7 @@ The directory structure is as follows:
   * **Source data**: This folder contains the source of our dataset.
   * **Abstractive summarization**: This folder contains the data required for the Abstractive Summarization model in deep learning, which is obtained by further processing labeled data.
   * **Hierarchical text classification**: This folder contains the data required for the Hierarchical text classification model in deep learning, which is obtained by further processing labeled data.
-  * **LLMEvaluate**: The folder contains the results of cognitive pathway extraction using the large language models GPT-3.5 and GPT-4 that we invoked.
-
+ 
 * **Deep_learning**:
 The folder contains code for extracting cognitive pathways of depression patients using deep learning models.
 
