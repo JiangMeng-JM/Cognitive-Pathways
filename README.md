@@ -18,9 +18,6 @@ The folder contains pre-trained models Ernie and Pegasus used in the paper. You 
 * **LLMEvaluate**:
 The folder contains code for extracting cognitive pathways of depression patients using LLM.
 
-* **Web_Tool**:
-The folder contains code for designing a web page. On this webpage, users can upload and import a text file of a Patient Statement. Subsequently, our deep learning model will be utilized to extract the cognitive pathway of the patient.
-
 
 ## Questions:
 If you have any questions, comments, suggestions, or issues with using this repository, please send a note to *****@163.com** . 
