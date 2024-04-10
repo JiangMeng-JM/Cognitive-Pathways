@@ -24,8 +24,9 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 
 ## Deep_learning:
 ### Abstractive summarization
-* [`train.py`]
-(<https://github.com/JiangMeng-JM/Cognitive-Pathways---Deep-Learning/blob/main/Deep_learning/Abstractive%20summarization/train.py>):
+* `train.py`: Use this file to train the model.
+* `predict.py`: You can use this file to load the trained model and extract the summary directly.
+* `checkpoints`: This folder is my trained model for text summarization.
 
 ### Hierarchical text classification
 
