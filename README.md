@@ -7,10 +7,10 @@ It contains:
 - The pre-trained models Ernie and Pegasus used in the paper ([link](#Pre-trained-models))
 - The deep learning models for extracting cognitive pathways from social media texts ([link](#Deep_learning))
 - The code for extracting cognitive pathways using LLM from social media texts ([link](#LLMEvaluate))
-- 
-* Paper link: https://arxiv.org/abs/***
+
 
 If you use this material, we would appreciate if you could cite the following reference:
+* Paper link: https://arxiv.org/abs/***
 ## Citation
 ```bibtex
 @misc
@@ -37,13 +37,14 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 
 
 ## LLMEvaluate:
-The folder contains code for extracting cognitive pathways of depression patients using LLM.
-
-
-## Questions:
-If you have any questions, comments, suggestions, or issues with using this repository, please send a note to *****@163.com** . 
+* `Cognitive_Pathways_prompt.py`: This python file is the prompt provided to the LLM to enable it to extract the cognitive pathway based on this file.
+* `Classification_performance_Evaluation.py`: This python file is used to evaulate the performance of the LLM in extracting cognitive pathway from statements.
+* `Summarization_performance_Evaluation.py`: This python file is used to evaulate the performance of the LLM for generating summaries.
 
 
 ## Related codes:
+1. **PaddleNLP** :(https://github.com/PaddlePaddle/PaddleNLP)
 
 ## References:
+1. Sun Y, Wang S, Feng S, et al. Ernie 3.0: Large-scale knowledge enhanced pre-training for language understanding and generation[J]. arXiv preprint arXiv:2107.02137, 2021.
+2. Zhang J, Zhao Y, Saleh M, et al. Pegasus: Pre-training with extracted gap-sentences for abstractive summarization[C]//International conference on machine learning. PMLR, 2020: 11328-11339.
