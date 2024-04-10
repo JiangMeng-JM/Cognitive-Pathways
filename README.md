@@ -18,7 +18,7 @@ If you use this material, we would appreciate if you could cite the following re
 ```
 
 ## Pre-trained-Model:
-The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to the folder “Model”* [`Model`], you can also download them from the following links:
+The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to the folder * `Model`, you can also download them from the following links:
   * **Ernie**: [https://huggingface.co/nghuyong/ernie-3.0-medium-zh](https://huggingface.co/nghuyong/ernie-3.0-medium-zh)
   * **Pegasus**: [https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese](https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese)
 
@@ -29,6 +29,11 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 * `checkpoints`: This folder is my trained model for text summarization.
 
 ### Hierarchical text classification
+* `train.py`: Use this file to train the model.
+* `utils.py`: This file contains some utility functions.
+* `evaluate.py`: You can use this python file to evaluate the performance of the model.
+* `predict.py`: You can use this file to load the trained model and perform classification prediction directly.
+* `checkpoints`: This folder is my trained model for hierarchical text classification.
 
 
 ## LLMEvaluate:
