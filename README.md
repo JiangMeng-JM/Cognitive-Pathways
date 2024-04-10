@@ -5,7 +5,7 @@ This repository contains material associated to this [paper](#Citation).
 
 It contains:
 - The pre-trained models Ernie and Pegasus used in the paper ([link](#Pre-trained-models))
-- The deep learning models for extracting cognitive pathways from social media texts ([link](#Deep-learning-Models))
+- The deep learning models for extracting cognitive pathways from social media texts ([link](#Deep_learning))
 - The code for extracting cognitive pathways using LLM from social media texts ([link](#LLMEvaluate))
 - 
 * Paper link: https://arxiv.org/abs/***
@@ -18,12 +18,16 @@ If you use this material, we would appreciate if you could cite the following re
 ```
 
 ## Pre-trained-Model:
-The folder contains pre-trained models Ernie and Pegasus used in the paper. You can also download them from the following links:
+The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to the folder “Model”* [`Model`], you can also download them from the following links:
   * **Ernie**: [https://huggingface.co/nghuyong/ernie-3.0-medium-zh](https://huggingface.co/nghuyong/ernie-3.0-medium-zh)
   * **Pegasus**: [https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese](https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese)
 
-## Deep-learning-Models:
-The folder contains code for extracting cognitive pathways of depression patients using deep learning models.
+## Deep_learning:
+### Abstractive summarization
+* [`train.py`]
+(<https://github.com/JiangMeng-JM/Cognitive-Pathways---Deep-Learning/blob/main/Deep_learning/Abstractive%20summarization/train.py>):
+
+### Hierarchical text classification
 
 
 ## LLMEvaluate:
