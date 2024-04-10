@@ -43,7 +43,7 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 
 
 ## Related codes:
-1. **PaddleNLP** :(https://github.com/PaddlePaddle/PaddleNLP)
+1. **PaddleNLP** :[https://github.com/PaddlePaddle/PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP)
 
 ## References:
 1. Sun Y, Wang S, Feng S, et al. Ernie 3.0: Large-scale knowledge enhanced pre-training for language understanding and generation[J]. arXiv preprint arXiv:2107.02137, 2021.
