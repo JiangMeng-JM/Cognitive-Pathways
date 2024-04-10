@@ -18,7 +18,7 @@ If you use this material, we would appreciate if you could cite the following re
 ```
 
 ## Pre-trained-Model:
-The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to the folder * `Model`, you can also download them from the following links:
+The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to the folder **`Model`**, you can also download them from the following links:
   * **Ernie**: [https://huggingface.co/nghuyong/ernie-3.0-medium-zh](https://huggingface.co/nghuyong/ernie-3.0-medium-zh)
   * **Pegasus**: [https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese](https://huggingface.co/IDEA-CCNL/Randeng-Pegasus-523M-Summary-Chinese)
 
@@ -43,7 +43,7 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 
 
 ## Related codes:
-1. **PaddleNLP** :[https://github.com/PaddlePaddle/PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP)
+1. **PaddleNLP** :   [https://github.com/PaddlePaddle/PaddleNLP](https://github.com/PaddlePaddle/PaddleNLP)
 
 ## References:
 1. Sun Y, Wang S, Feng S, et al. Ernie 3.0: Large-scale knowledge enhanced pre-training for language understanding and generation[J]. arXiv preprint arXiv:2107.02137, 2021.
