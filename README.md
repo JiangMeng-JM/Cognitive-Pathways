@@ -10,7 +10,7 @@ It contains:
 
 
 If you use this material, we would appreciate if you could cite the following reference:
-* Paper link: [https://arxiv.org/abs/***](https://arxiv.org/abs/2404.11449)
+* Paper link: [https://arxiv.org/abs/2404.11449](https://arxiv.org/abs/2404.11449)
 ## Citation
 ```bibtex
 Jiang M, Yu Y J, Zhao Q, et al. AI-Enhanced Cognitive Behavioral Therapy: Deep Learning and Large Language Models for Extracting Cognitive Pathways from Social Media Texts[J]. arXiv preprint arXiv:2404.11449, 2024.
