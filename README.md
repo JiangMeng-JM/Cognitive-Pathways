@@ -10,7 +10,7 @@ It contains:
 
 
 If you use this material, we would appreciate if you could cite the following reference:
-* Paper link: https://arxiv.org/abs/***
+* Paper link: [https://arxiv.org/abs/***](https://arxiv.org/abs/2404.11449)
 ## Citation
 ```bibtex
 Jiang M, Yu Y J, Zhao Q, et al. AI-Enhanced Cognitive Behavioral Therapy: Deep Learning and Large Language Models for Extracting Cognitive Pathways from Social Media Texts[J]. arXiv preprint arXiv:2404.11449, 2024.
@@ -25,14 +25,14 @@ The pre-trained Models Ernie and Pegasus used in the paper have been uploaded to
 ### Abstractive summarization
 * `train.py`: Use this file to train the model.
 * `predict.py`: You can use this file to load the trained model and extract the summary directly.
-* `checkpoints`: This folder is my trained model for text summarization.
+
 
 ### Hierarchical text classification
 * `train.py`: Use this file to train the model.
 * `utils.py`: This file contains some utility functions.
 * `evaluate.py`: You can use this python file to evaluate the performance of the model.
 * `predict.py`: You can use this file to load the trained model and perform classification prediction directly.
-* `checkpoints`: This folder is my trained model for hierarchical text classification.
+
 
 
 ## LLMEvaluate:
