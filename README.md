@@ -1,7 +1,7 @@
 # AI-Enhanced Cognitive Behavioral Therapy: Deep Learning and Large Language Models for Extracting Cognitive Pathways from Social Media Texts
 
 
-This repository contains material associated to this [paper](#Citation).
+This repository contains material associated to this [paper](#Citation). At present, only part of the content has been shown, and all the relevant content of the paper will be shown next. Stay tuned.
 
 It contains:
 - The pre-trained models Ernie and Pegasus used in the paper ([link](#Pre-trained-models))
